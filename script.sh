@@ -1,6 +1,6 @@
-usage() {echo "Usage:bash $0 -p <password.> " 1>&2; exit 1; }
+usage() { echo "Usage:bash $0 -p <password.> " 1>&2; exit 1; }
 
-if [$# -eq 0 ];
+if [ $# -eq 0 ];
 then
 	usage
 else
@@ -15,7 +15,7 @@ else
 	done
 fi
 
-if [[-n $pwd ]]; then
+if [[ -n $pwd ]]; then
 	HOST="locahost"
 	user="wpadmin"
 	password="Password!@#"
