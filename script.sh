@@ -1,4 +1,5 @@
-usage() {echo "usage:bash $0 -p < > "1>&2; exit 1; }
+usage() {echo "Usage:bash $0 -p <password.> " 1>&2; exit 1; }
+
 if [$# -eq 0 ];
 then
 	usage
