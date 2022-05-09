@@ -1,4 +1,4 @@
-usage() { echo "Usage:bash $0 -p <put your database name and user name.> " 1>&2; exit 1; }
+usage() { echo "Usage:bash $0 -p <password.> " 1>&2; exit 1; }
 
 if [ $# -eq 0 ];
 then
@@ -19,9 +19,9 @@ if [[ -n $pwd ]]; then
 	HOST="locahost"
 	user="wpadmin"
 	password="Password!@#"
-	mysql -u root -p<<EOF
+	mysql -u root -p$pwd <<EOF
 	CREATE DATABASE wordpress;
-	GRANT ALL PRIVILEGES ON wordpress.* TO "wpadmin"@"localhost" IDENTIFIED BY "Password!@#;"
+	GRANT ALL PRIVILEGES ON wordpress.* TO "${user}"@"${HOST}" IDENTIFIED BY "${password};"
 	FLUSH PRIVILEGES;
 	exit;
 EOF
