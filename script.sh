@@ -17,7 +17,7 @@ fi
 
 if [[ -n $pwd ]]; then
 	HOST="locahost"
-	user="wpadmin"
+	user="root"
 	password="Password!@#"
 	mysql -u root -p$pwd <<EOF
 	CREATE DATABASE wordpress;
