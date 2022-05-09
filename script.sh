@@ -22,7 +22,6 @@ if [[ -n $pwd ]]; then
 	mysql -u root -p$pwd <<EOF
 	CREATE DATABASE wordpress;
 	GRANT ALL PRIVILEGES ON wordpress.* TO "${user}"@"${HOST}" IDENTIFIED BY "${password};"
-	GRANT ALL PRIVILEGES ON *.* TO '"${user}"@"${HOST}" WITH GRANT OPTION;
 	FLUSH PRIVILEGES;
 	exit;
 EOF
