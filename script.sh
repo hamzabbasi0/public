@@ -21,7 +21,7 @@ if [[ -n $pwd ]]; then
 	password="Password!@#"
 	mysql -u root -p<<EOF
 	CREATE DATABASE wordpress;
-	GRANT ALL PRIVILEGES ON wordpress.* TO "${user}"@"${HOST}" IDENTIFIED BY "${password};"
+	GRANT ALL PRIVILEGES ON wordpress.* TO "$wpadmin"@"$localhost" IDENTIFIED BY "$Password!@#;"
 	FLUSH PRIVILEGES;
 	exit;
 EOF
